@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <script src="jquery-3.3.1.min.js"></script>
+  <title>Exercice 1</title>
+</head>
+<body>
+  <div>
+    <p> Cliquez sur le bouton + et ton score augmente ou sur le bouton - et ton score descend </p>
+  </div>
+  <form>
+    <button id="update" type="button">+</button>
+     <button id="downgrade" type="button">-</button>
+      <div id="counter">0</div>
+  </form>
+  <script>
+    $(function() {
+  $('#counter').data('button', 0);
+  $('#update').click(function(){
+  $('#counter').html(function(){
+     $this = $(this),
+      count = $this.data('button') + 1;
+        $this.data('button', count);
+         return count;
+    });
+});
+});
+$(function() {
+  $('#count').data('button', 0);
+  $('#downgrade').click(function(){
+  $('#counter').html(function(){
+     $this = $(this),
+      count = $this.data('button') - 1;
+        $this.data('button', count);
+         return count;
+    });
+});
+});
+  </script>
+</body>
+</html>

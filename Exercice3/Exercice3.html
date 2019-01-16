@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="jquery-3.3.1.min.js"></script>
+    <title>Exercice 3</title>
+  </head>
+  <body>
+    <h4>Tapez un nombre entre 0 et 100</h4>
+    <form>
+    <input type="text" name="text" value="" id='nombre'>
+    <button type="button" name="button" id="paris">Pariez</button>
+    <p id="response"></p>
+    <h4>Nombres d'essais</h4>
+    <input type="count" name="" value="" id="count">
+  </form>
+    <script>
+      $(function(){
+var prix = 0;
+var paris = null;
+prix = Math.floor(Math.random() * (100 - 0) + 1);
+console.log(prix);
+$('#paris').click(function(){
+  paris = $('#nombre').val();
+  if(paris == prix){
+    alert('Correcte');
+  } else if (paris > prix){
+    $('#response').html("Moins");
+  } else {
+    $('#response').html("Plus");
+  }
+    $('#count').get(0).value++;
+});
+});
+    </script>
+  </body>
+</html>

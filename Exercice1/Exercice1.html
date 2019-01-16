@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <script src="jquery-3.3.1.min.js"></script>
+  <title>Exercice 1</title>
+</head>
+<body>
+  <div>
+    <p> Cliquez sur le bouton et votre score augmente.</p>
+  </div>
+  <form>
+    <button id="update" type="button">Cliquez !</button>
+     <div id="counter"></div>
+  </form>
+<script>
+$(function() {
+var count = 0;
+  $("#update").click(function() {
+    count++;
+    $("#counter").html("Vous êtes à "+ count + " clic(s)");
+  });
+});
+</script>
+</body>
+</html>
